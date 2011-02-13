@@ -40,10 +40,7 @@ class ioDoctrineMenuActions
 
   public function getDoctrineMenuBreadcrumbs ($name, $withRoot = true)
   {
-    return $this->_pluginConfiguration->getMenuManager()
-      ->getMenu($name)
-      ->getBreadcrumbsMenu()
-    ;
+    return $this->getDoctrineMenu($name)->getBreadcrumbsMenu($withRoot);
   }
 
   /**
