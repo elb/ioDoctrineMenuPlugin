@@ -22,3 +22,9 @@ function get_doctrine_menu($name)
     ->getMenuManager()
     ->getMenu($name);
 }
+
+function get_doctrine_menu_breadcrumbs ($name, $withRoot = true)
+{
+  $menu = get_doctrine_menu($name);
+  return  $menu->getBreadcrumbsMenu($withRoot);
+}

@@ -38,6 +38,14 @@ class ioDoctrineMenuActions
       ->getMenu($name);
   }
 
+  public function getDoctrineMenuBreadcrumbs ($name, $withRoot = true)
+  {
+    return $this->_pluginConfiguration->getMenuManager()
+      ->getMenu($name)
+      ->getBreadcrumbsMenu()
+    ;
+  }
+
   /**
    * Listener method for method_not_found events
    *
