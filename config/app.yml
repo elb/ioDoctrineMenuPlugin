@@ -1,5 +1,7 @@
 all:
   doctrine_menu:
+    # the manager class name to use
+    manager_class: ioDoctrineMenuManager
     # If enabled, label will become an i18n field
     use_i18n: false
     # array of cultures that will be shown in the admin module

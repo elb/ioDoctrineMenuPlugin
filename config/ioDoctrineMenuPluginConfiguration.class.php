@@ -31,7 +31,8 @@ class ioDoctrineMenuPluginConfiguration extends sfPluginConfiguration
   {
     if ($this->_menuManager === null)
     {
-      $manager = new ioDoctrineMenuManager();
+      $class   = sfConfig::get('app_doctrine_menu_manager_class', 'ioDoctrineMenuManager');
+      $manager = new $class();
 
       // Set the cache driver if caching is enabled
       $cacheConfig = sfConfig::get('app_doctrine_menu_cache');
